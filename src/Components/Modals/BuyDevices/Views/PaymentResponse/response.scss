@@ -1,0 +1,25 @@
+.error {
+  display: block;
+  margin: auto;
+  width: 60%;
+  white-space: pre-line;
+  font-size: small;
+}
+
+.response_container {
+  background-color: black;
+  background: fixed;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins';
+  margin: 15px 0;
+  text-align: center;
+}
+
+.success {
+  display: block;
+  margin: auto;
+  width: 30%;
+  white-space: pre-line;
+  font-size: small;
+}

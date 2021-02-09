@@ -1,0 +1,13 @@
+<svg id="_mark_scooter_available" data-name="🗄️ mark_scooter_available" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="96" height="96" viewBox="0 0 96 96">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#86bf28"/>
+      <stop offset="1" stop-color="#45c48b"/>
+    </linearGradient>
+  </defs>
+  <g id="_icon_available" data-name="📒 icon_available" transform="translate(-3 -3)">
+    <circle id="Oval" cx="48" cy="48" r="48" transform="translate(3 3)" fill="url(#linear-gradient)"/>
+    <circle id="Oval-2" data-name="Oval" cx="36" cy="36" r="36" transform="translate(15 15)" fill="#42474b"/>
+    <path id="_icon_scooter" data-name="📒 icon_scooter" d="M97.2,79.355a5.116,5.116,0,0,0-1.2.157l-1.149-4.6.163-.227-3.948-12.2H85.023V65.3h4L91.9,74.2l-6.418,8.9H77.944a8.186,8.186,0,0,0-7.228-7.48,8.329,8.329,0,0,0-1.769-.008l.3,2.8a5.2,5.2,0,0,1,3.594.944,5.153,5.153,0,1,0,4.94,6.559H86.92L92.7,77.9l.77,3.081A5.138,5.138,0,1,0,97.2,79.355Zm-24.36,7.5a2.343,2.343,0,1,1,2.292-2.6c0,.034,0,.064,0,.1l.021,0c0,.054.032.1.032.156A2.344,2.344,0,0,1,72.843,86.85Zm24.36,0a2.328,2.328,0,0,1-1.012-4.432l.5-.126-.006-.022a2.266,2.266,0,0,1,.515-.1,2.342,2.342,0,0,1,0,4.685Z" transform="translate(-34.023 -24.823)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>

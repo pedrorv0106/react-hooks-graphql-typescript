@@ -1,0 +1,149 @@
+#scooter-panel {
+  margin: 31px 41px !important;
+  border-radius: 26px !important;
+  padding: 15px !important;
+  background-color: white;
+  height: calc(100vh - 62px) !important;
+  font-family: "Poppins";
+  .scooter-detail {
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 18px;
+      .title {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 0.26px;
+        color: #000000;
+      }
+      .close {
+        background-color: #1270e3;
+        border-radius: 50%;
+        color: white;
+        width: 27px;
+        height: 27px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .btn-tab {
+      border: solid 2px #1270e3;
+      border-radius: 6px;
+      height: 55px;
+      align-items: center;
+      .btn {
+        flex: 1;
+        text-align: center;
+        color: #1270e3;
+        height: 100%;
+        cursor: pointer;
+        vertical-align: middle;
+        line-height: 50px;
+      }
+      .active-tab {
+        color: white;
+        background-color: #006ce6;
+      }
+    }
+    .flex {
+      display: flex;
+      justify-content: space-between;
+    }
+    h1 {
+      font-size: 28px;
+      letter-spacing: 1.24px;
+      color: #006ce6;
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: 0.26px;
+      color: #000000;
+    }
+    .scooter-id {
+      font-size: 23px;
+      line-height: 1.3;
+      letter-spacing: 1.14px;
+      color: #989898;
+    }
+    .dash-line {
+      height: 1px;
+      background-color: #eaeaea;
+      margin: 26px 0;
+    }
+    .status {
+      padding: 10px 0;
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 2;
+      letter-spacing: 0.66px;
+      color: #42474b;
+      display: flex;
+      align-items: center;
+      div {
+        width: 82px;
+        height: 26px;
+        border-radius: 13px;
+        background-color: #e7ffed;
+        font-size: 12px;
+        line-height: 26px;
+        color: #01961b;
+        text-align: center;
+        vertical-align: middle;
+        margin-left: 10px;
+      }
+    }
+    .location {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      font-size: 12px;
+      font-weight: 500;
+      color: #a2a2a2;
+      padding-bottom: 10px;
+      div {
+        display: flex;
+      }
+      .btn-send {
+        border-radius: 12px;
+        background-color: #edf3f9;
+        font-weight: bold;
+        color: #1270e3;
+        margin: 0 10px;
+      }
+    }
+    .one-day {
+      .one-day-date {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.5;
+        letter-spacing: 0.26px;
+        color: #000000;
+        padding-top: 20px;
+      }
+      .one-activity {
+        padding: 26px 0;
+        display: flex;
+        border-bottom: solid 1px #eaeaea;
+        justify-content: space-between;
+        .comment-detail {
+          font-size: 14px;
+          color: #454142;
+          .time {
+            color: #a2a2a2;
+          }
+        }
+        .detail-btn {
+          font-size: 10px;
+          font-weight: bold;
+          line-height: 1;
+          color: #1270e3 !important;
+        }
+      }
+    }
+  }
+}

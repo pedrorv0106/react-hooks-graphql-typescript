@@ -1,0 +1,39 @@
+$small-font-size: 1.3rem;
+$normal-font-size: 1.7rem;
+$large-font-size: 2.3rem;
+$font-family: 'Poppins';
+
+.title {
+  font-weight: 500;
+  font-family: $font-family;
+
+  /* 
+    Font Sizes
+  */
+  &_small {
+    font-size: $small-font-size;
+  }
+
+  &_normal {
+    font-size: $normal-font-size;
+  }
+
+  &_large {
+    font-size: $large-font-size;
+  }
+
+  /* 
+    Font Sizes
+  */
+  &_left {
+    text-align: left;
+  }
+
+  &_center {
+    text-align: center;
+  }
+
+  &_right {
+    text-align: right;
+  }
+}

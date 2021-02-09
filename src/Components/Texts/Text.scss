@@ -1,0 +1,128 @@
+$small-font-size: 1.3rem;
+$normal-font-size: 1.7rem;
+$large-font-size: 2.3rem;
+
+$xs-font-size: 0.7rem;
+$s-font-size: 1rem;
+$m-font-size: 1.5rem;
+$l-font-size: 1.9rem;
+$xl-font-size: 2.2rem;
+$xxl-font-size: 2.6rem;
+$xxxl-font-size: 3rem;
+
+$font-family: 'Poppins';
+
+.text {
+  font-weight: 400;
+  font-family: $font-family;
+  margin:0;
+  white-space: pre-line;
+
+
+  // WEIGHTS
+  &_weight {
+
+    &_bolder {
+      font-weight: 700;
+    }
+
+    &_bold {
+      font-weight: 600;
+    }
+
+    &_regular {
+      font-weight: 500;
+    }
+
+    &_thin {
+      font-weight: 100;
+    }
+  }
+
+  // COLORS
+  &_color {
+
+    &_success {
+      color: #29c78a;
+    }
+
+    &_gray {
+      color: gray;
+    }
+
+    &_normal {
+      color: #111;
+    }
+
+    &_lightdark {
+      color: #444;
+    }
+
+    &_white {
+      color: #fff;
+    }
+
+    &_error {
+      color: red;
+    }
+
+  }
+
+  /* 
+    Font Sizes
+  */
+  &_small {
+    font-size: $small-font-size;
+  }
+
+  &_normal {
+    font-size: $normal-font-size;
+  }
+
+  &_large {
+    font-size: $large-font-size;
+  }
+
+  &_xs {
+    font-size: $xs-font-size;
+  }
+
+  &_s {
+    font-size: $s-font-size;
+  }
+
+  &_m {
+    font-size: $m-font-size;
+  }
+
+  &_l {
+    font-size: $l-font-size;
+  }
+
+  &_xl {
+    font-size: $xl-font-size;
+  }
+
+  &_xxl {
+    font-size: $xxl-font-size;
+  }
+
+  &_xxxl {
+    font-size: $xxxl-font-size;
+  }
+
+  /* 
+    Font Sizes
+  */
+  &_left {
+    text-align: left;
+  }
+
+  &_center {
+    text-align: center;
+  }
+
+  &_right {
+    text-align: right;
+  }
+}

@@ -1,0 +1,59 @@
+name:  CI/CD
+
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the master branch
+  push:
+    branches:
+      - feature/base_dashboard_screen
+
+  pull_request:
+    branches:
+      - feature/base_dashboard_screen
+
+jobs:
+  DeployS3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set Enviromental Variables Based On the Branch
+        id: vars
+        run: |
+          branch=${GITHUB_REF#refs/*/}
+          echo "::set-output name=BRANCH::${branch}"
+          echo "::set-output name=AUTH_REGION::DEVELOPMENT_AUTH_REGION"
+          echo "::set-output name=AUTH_USERPOOL_ID::DEVELOPMENT_AUTH_USERPOOL_ID"
+          echo "::set-output name=AUTH_WEB_CLIENT_ID::DEVELOPMENT_AUTH_WEB_CLIENT_ID"
+          echo "::set-output name=STRIPE_TOKEN::DEVELOPMENT_STRIPE_TOKEN"
+          echo "::set-output name=MICROSERVICE_PAYMENTS_V2::DEVELOPMENT_MICROSERVICE_PAYMENTS_V2"
+
+      - uses: actions/checkout@v1
+      # - uses: bahmutov/npm-install@v1
+      - uses: chrislennon/action-aws-cli@v1.1
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: 'Installing Dependencies...'
+        run: 'yarn install'
+
+      - name: '[ ${{ steps.vars.outputs.BRANCH }} ] Building project...'
+        run: CI= yarn build
+        env:
+          REACT_APP_AUTH_REGION: '${{ secrets[steps.vars.outputs.AUTH_REGION] }}'
+          REACT_APP_AUTH_USERPOOL_ID: '${{ secrets[steps.vars.outputs.AUTH_USERPOOL_ID] }}'
+          REACT_APP_AUTH_WEB_CLIENT_ID: '${{ secrets[steps.vars.outputs.AUTH_WEB_CLIENT_ID] }}'
+          REACT_APP_STRIPE_TOKEN: '${{ secrets[steps.vars.outputs.STRIPE_TOKEN] }}'
+          REACT_APP_MICROSERVICE_PAYMENTS_V2: '${{ secrets[steps.vars.outputs.MICROSERVICE_PAYMENTS_V2] }}'
+          
+      # should save this keys in github, settings of the project, secrets :
+      # AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY and AWS_BUCKET_NAME
+      - name: Deploy to S3 (Development)
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_DEV }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_DEV }}
+          BUILD_DIRECTORY: build
+          BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME_RADU }}
+        run: |
+          npm run deploy-aws
